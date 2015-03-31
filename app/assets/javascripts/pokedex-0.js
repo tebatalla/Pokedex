@@ -17,7 +17,7 @@ Pokedex.Models.Pokemon = Backbone.Model.extend({
 
   parse: function (payload) {
     if (payload.hasOwnProperty("toys")) {
-      this.toys().set(payload.toys)
+      this.toys().set(payload.toys);
       delete payload.toys;
     }
     return payload;
@@ -31,7 +31,7 @@ Pokedex.Models.Toy = Backbone.Model.extend({
 Pokedex.Collections.Pokemon = Backbone.Collection.extend({
   url: "/pokemon",
   model: Pokedex.Models.Pokemon
-})
+});
 
 Pokedex.Collections.PokemonToys = Backbone.Collection.extend({
   model: Pokedex.Models.Toy
