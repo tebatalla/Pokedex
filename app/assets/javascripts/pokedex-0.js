@@ -7,7 +7,9 @@ Pokedex.Models.Pokemon = Backbone.Model.extend({
 
   toys: function () {
     if(this._toys === undefined){
-      this._toys = new Pokedex.Collections.PokemonToys();
+      this._toys = new Pokedex.Collections.PokemonToys([], {
+        pokemon: this
+      });
     }
 
     return this._toys;
