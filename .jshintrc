@@ -1,0 +1,6 @@
+{
+  "globals": {
+    "Pokedex": true,
+    "Backbone": true
+  }
+}
